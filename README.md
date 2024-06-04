@@ -10,6 +10,6 @@ Currently, two official plugins are available:
 To start the program:
 1) Open the terminal
 2) Go to the required folder
-3) Type : "npm install"
-4) then type : "npm run dev" to start the server
+3) Type : ```npm install```
+4) then type : ```npm run dev``` to start the server
 5) Copy paste the local hoste server into the browser to see the website
