@@ -5,6 +5,7 @@ const App = () => {
   return (
     <>
       <Sidebar />
+      {/* <h2 className="">hello mote</h2> */}
     </>
   );
 };
