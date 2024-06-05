@@ -7,12 +7,14 @@ const Sidebar = () => {
   return (
     <div className=" sidebar">
       <div className="top">
-        <img
-          onClick={() => setclicked((prev) => !prev)}
-          className="menu"
-          src={assets.menu_icon}
-          alt=""
-        />
+        <div className="dd">
+          <img
+            onClick={() => setclicked((prev) => !prev)}
+            className="menu"
+            src={assets.menu_icon}
+            alt=""
+          />
+        </div>
 
         <div className="new-chat">
           <img src={assets.plus_icon} alt="" />
