@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { assets } from "../../assets/assets";
 import "./Main.css";
+import { Context } from "../../Context/Context";
 const Main = () => {
+  const { onSent, recent, loading, showResult, result, setInput, input } =
+    useContext(Context);
   return (
     <div className="main">
       <div className="toplayer">
@@ -10,38 +13,50 @@ const Main = () => {
       </div>
 
       <div className="lowerLayer">
-        <div className="greetings">
-          <p className="Hello">Hello Anubhav,</p>
-          <p>How can I Help you today?</p>
-        </div>
+        {!showResult ? (
+          <>
+            <div className="greetings">
+              <p className="Hello">Hello Anubhav,</p>
+              <p>How can I Help you today?</p>
+            </div>
 
-        <div className="cards">
-          <div className="card">
-            <p>Explain what the keto diet is in simple terms</p>
-            <img src={assets.bulb_icon} alt="" />
-          </div>
-          <div className="card">
-            <p>Give me tips for how to grow my youtube channel</p>
-            <img src={assets.compass_icon} alt="" />
-          </div>
+            <div className="cards">
+              <div className="card">
+                <p>Explain what the keto diet is in simple terms</p>
+                <img src={assets.bulb_icon} alt="" />
+              </div>
+              <div className="card">
+                <p>Give me tips for how to grow my youtube channel</p>
+                <img src={assets.compass_icon} alt="" />
+              </div>
 
-          <div className="card">
-            <p>Card1</p>
-            <img src={assets.bulb_icon} alt="" />
-          </div>
+              <div className="card">
+                <p>Card1</p>
+                <img src={assets.bulb_icon} alt="" />
+              </div>
 
-          <div className="card">
-            <p>Card1</p>
-            <img src={assets.bulb_icon} alt="" />
-          </div>
-        </div>
+              <div className="card">
+                <p>Card1</p>
+                <img src={assets.bulb_icon} alt="" />
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="result"> </div>
+        )}
+
         <div className="bottomSearch">
           <div className="searchbar">
-            <input type="text" placeholder="Enter the prompt" />
+            <input
+              onChange={(e) => setInput(e.target.value)}
+              value={input}
+              type="text"
+              placeholder="Enter the prompt"
+            />
             <div className="images">
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img src={assets.send_icon} alt="" />
+              <img onClick={() => onSent()} src={assets.send_icon} alt="" />
             </div>
           </div>
 
