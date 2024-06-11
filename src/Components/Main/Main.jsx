@@ -42,7 +42,24 @@ const Main = () => {
             </div>
           </>
         ) : (
-          <div className="result"> </div>
+          <div className="result">
+            <div className="result-title">
+              <img src={assets.user_icon} alt="" />
+              <p>{recent}</p>
+            </div>
+            <div className="result-data">
+              <img src={assets.gemini_icon} alt="" />
+              {loading ? (
+                <div className="load">
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <p dangerouslySetInnerHTML={{ __html: result }}></p>
+              )}
+            </div>
+          </div>
         )}
 
         <div className="bottomSearch">
