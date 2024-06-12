@@ -80,6 +80,7 @@
   width: 100%;
   margin: auto;
   padding: 0px 20px;
+  margin-top: 10px;
 }
 
 .main .searchbar {
@@ -175,4 +176,20 @@
   font-size: 17px;
   font-weight: 300;
   line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .bottomSearch input {
+    flex: none;
+    width: 150px;
+  }
+  .bottomSearch img {
+    width: 20px;
+  }
+  .searchbar {
+    padding: 5px 10px;
+  }
+  .searchbar div {
+    gap: 5px;
+  }
 }

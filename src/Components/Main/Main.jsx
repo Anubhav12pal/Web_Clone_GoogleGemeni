@@ -62,8 +62,8 @@ const Main = () => {
           </div>
         )}
 
-        <div className="bottomSearch">
-          <div className="searchbar">
+        <div className="bottomSearch ">
+          <div className="searchbar  ">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
