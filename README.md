@@ -13,3 +13,5 @@ To start the program:
 3) Type : ```npm install```
 4) then type : ```npm run dev``` to start the server
 5) Copy paste the local hoste server into the browser to see the website
+
+   Web deployed version: https://modifiedtailwind--geminianubhav.netlify.app/
