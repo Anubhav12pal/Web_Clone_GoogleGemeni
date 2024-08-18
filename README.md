@@ -10,8 +10,12 @@ Currently, two official plugins are available:
 To start the program:
 1) Open the terminal
 2) Go to the required folder
-3) Type : ```npm install```
-4) then type : ```npm run dev``` to start the server
-5) Copy paste the local hoste server into the browser to see the website
+3) Update the apiKey in the Gemeni.js file as I have removed the key due to constant 429 errors, kindly use your own api keys.
+4) Type : ```npm install```
+5) then type : ```npm run dev``` to start the server
+6) Copy paste the local hoste server into the browser to see the website
 
-   Web deployed version: https://modifiedtailwind--geminianubhav.netlify.app/
+NOTE: The web-deployed version won't answer any questions, as I removed my API key from it, to make it run kindly update the apiKey in the gemeni.js file
+   Web deployed version: https://modifiedtailwind--anubhavgemeniclone.netlify.app/
+
+
